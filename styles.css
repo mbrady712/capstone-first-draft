@@ -1,0 +1,309 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+body {
+	background-image: url(imagesandvideos/chopin.png);
+	background-attachment: fixed;
+}
+
+/*HEADER AND NAV*/
+
+header{
+	background-image: linear-gradient(to bottom right, #18b6c4, #9f89c5);
+	border: 5px solid rgb(54, 15, 122);
+	width: inherit;
+	z-index: -1;
+}
+#topleft{
+	margin-left: 15%;
+}
+#topright{
+	margin-left: 80%;
+}
+.wrapper{
+	animation-name: quarternote;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	background-color: rgba(88, 85, 85, 0);
+	width: 25px;
+	height: 50px;
+	position: absolute;
+	border-radius: 50%;
+	margin-top: 2%;
+}
+.notehead{
+	border-radius: 50%;
+	background-color: black;
+	width: 100%;
+	height: 50%;
+	margin-top: -50%;
+	animation-name: notehead;
+	animation-duration: 8s;
+	animation-delay: .36s;
+	animation-iteration-count: infinite;
+}
+.stem{
+	background-color: black;
+	height: 100%;
+	width: 20%;
+	margin-left: 80%;
+	animation-name: stem;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes stem{
+	0%{background-color: rgba(0,0,0, 0%);}
+	50%{background-color: black; box-shadow: 0 0 2px 2px;}
+	100%{background-color: rgba(0,0,0, 0%);}
+}
+@keyframes notehead{
+	0%{background-color: #18b6c4; box-shadow: 0 0 5px 5px rgb(209, 167, 88);}
+	50%{background-color: black; box-shadow: 0 0 2px 2px;}
+	100%{background-color: #18b6c4; box-shadow: 0 0 5px 5px rgb(209, 167, 88);}
+}
+@keyframes quarternote{
+	  0%{transform: rotate(0deg); transform-origin: bottom center;}
+	  25%{background-color: rgb(54, 15, 122);}
+	  50%{transform: rotate(360deg); transform-origin: bottom center; background-color:rgba(0,0,0, 0%);}
+	  100%{transform: rotate(360deg); transform-origin: bottom center;}
+}
+img.logo{
+	width: 10%;
+	height: 10%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+a.title{
+	display: block;
+	font-size: 4vw;
+	text-decoration: none;
+	font-family: Monotype Corsiva;
+	color: black;
+	text-align: center;
+}
+h2{
+	text-align: center;
+	font-family: Monotype Corsiva;
+	font-size: 1.5vw;
+}
+nav{
+	text-align: center;
+	border: 5px solid rgb(54, 15, 122);
+	background-image: linear-gradient(to bottom right, rgb(159, 137, 197), #18b6c4);
+	width: inherit;
+}
+a.link{
+	text-align: center;
+	padding-left: 5%;
+	padding-right: 5%;
+	font-family: Monotype Corsiva;
+	text-decoration: none;
+	color: black;
+	font-size: 2vw;
+	transition: .5s;
+	border-radius: 5px;
+	height: 100%;
+}
+a.link:hover{
+	background-color:rgb(194, 175, 226);
+	color:rgb(54, 15, 122);
+}
+.sticky {
+	position: sticky;
+	top: 0;
+	width: inherit;
+}
+.sticky + .video{
+	padding-top: -40px;
+}
+/*HOME*/
+video{
+	height: auto;
+	width: 100%;
+	object-fit: cover;
+	position: absolute;
+	z-index:-1;
+	/*URL: https://www.pexels.com/video/close-up-footage-of-someone-playing-a-piano-3865344/*/
+}
+h3.home{
+	padding: 10%;
+	text-align: center;
+	font-size: 5vw;
+	color: white;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: black;
+	text-shadow: 2px 2px black;
+	font-family: Georgia;
+}
+section.mid{
+	background-image: linear-gradient(to bottom right, #18b6c4, rgb(159, 137, 197));
+	border: 5px solid rgb(54, 15, 122);
+	margin-top: 1%;
+}
+h4{
+	padding: 2%;
+	font-size: 4vw;
+	text-align: center;
+	font-family: Georgia;
+}
+
+/*ABOUT*/
+
+section.container{
+	height: 75%;
+	padding-bottom: 5%;
+	padding-top: 5%;
+}
+h2.title{
+	font-size: 4vw;
+	text-align: center;
+	font-family: Georgia;
+	background-image: linear-gradient(to bottom right, #18b6c4, rgb(159, 137, 197));
+	border: 5px solid rgb(54, 15, 122);
+	margin-left: 25%;
+	margin-right: 25%;
+	border-radius: 25px;
+	margin-bottom: 2%;
+}
+img.headshot{
+	width: 500px;
+	height: 400px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 10px solid rgb(54, 15, 122);
+	border-radius: 25px;
+}
+section.bio{
+	background-image: linear-gradient(to bottom right, #18b6c4, rgb(159, 137, 197));
+	border: 5px solid rgb(54, 15, 122);
+	padding: 2%;
+	font-family: Arial;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 1.5vw;
+	border-radius: 20px;
+}
+
+/*LESSONS*/
+
+section.philosophy{
+	background-image: linear-gradient(to bottom right, #18b6c4, rgb(159, 137, 197));
+	border: 5px solid rgb(54, 15, 122);
+	padding: 2%;
+	font-family: Arial;
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 20px;
+	margin-bottom: -5%;
+}
+h3.philosophy{
+	padding-top: 25px;
+	font-size: 3vw;
+	text-align: center;
+	font-family: Georgia;
+}
+p.philosophy{
+	padding: 1%;
+	font-family: Arial;
+	font-size: 1.5vw;
+}
+b{
+	padding: 1%;
+	font-size: 1.5vw;
+	font-family: Arial;
+}
+
+/*CONTACT*/
+
+section.form{
+	background-image: linear-gradient(to bottom right, #18b6c4, rgb(159, 137, 197));
+	border: 5px solid rgb(54, 15, 122);
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 2%;
+	width: 60%;
+	border-radius: 25px;
+	margin-bottom: 2%;
+	margin-top: -4%;
+}
+form{
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	font-family: Arial;
+	font-size: 1.5vw;
+}
+input{
+	border-radius: 5px;
+	border: solid rgb(54, 15, 122) 2px;
+	font-size: 1.5vw;
+	background-color: rgb(212, 205, 224);
+}
+div.error{
+    color: red;
+    font-family: Arial;
+    font-size: 1.5vw;
+    visibility: hidden;
+	display: inline;
+	margin-left: 1%;
+}
+textarea{
+	font-family: Arial;
+	border-radius: 5px;
+	border: solid rgb(54, 15, 122) 2px;
+	font-size: 1.5vw;
+	background-color: rgb(212, 205, 224);
+}
+input.submit{
+	width: 67.8%;
+	font-family: Arial;
+	transition: background-color .5s;
+}
+input[type=submit]:hover {
+    background-color: rgb(101, 98, 107);
+}
+
+/*FOOTER*/
+
+footer{
+	background-image: linear-gradient(to bottom right, #18b6c4, rgb(159, 137, 197));
+	border: 5px solid rgb(54, 15, 122);
+	padding: 2%;
+}
+#botleft{
+	margin-left: 15%;
+}
+#botright{
+	margin-left: 80%;
+}
+p.footer{
+	text-align: center;
+	font-family: Georgia;
+}
+p.info{
+	font-family: Georgia;
+	font-size: 1.5vw;
+	text-align: center;
+}
+/*SUBMISSION CONFIRMATION*/
+p.confirm{
+	font-size: 3vw;
+	text-align: center;
+	font-family: Georgia;
+	background-image: linear-gradient(to bottom right, #18b6c4, rgb(159, 137, 197));
+	border: 5px solid rgb(54, 15, 122);
+	margin-left: 25%;
+	margin-right: 25%;
+	border-radius: 25px;
+	padding: 5%;
+	margin-top: 5%;
+}
